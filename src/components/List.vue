@@ -4,13 +4,18 @@
             {{e.title}}
         </div>
 
-        <button v-on:click="findAll">Haz click aqui</button>
+       <!-- <button v-on:click="findAll">Haz click aqui</button>-->
 
     </div>
 </template>
 
 <script>
 export default {
+    created(){
+        //console.log("Creado!!")
+        this.findAll()
+    },
+
     data(){
         return{
          
