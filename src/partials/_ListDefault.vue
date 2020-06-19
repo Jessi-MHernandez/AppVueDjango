@@ -1,9 +1,7 @@
 <template>
     <div>
-        <b-container>
-            
-
-        <div v-for="e in elements" v-bind:key="e.id">
+        
+        <div v-for="e in elementsList" v-bind:key="e.id">
             <router-link :to=" '/detail/' + e.id " >
                 <b-card
                     :title ="e.title"
@@ -16,18 +14,17 @@
             </router-link>
  
         </div>
-        </b-container>
+        
 
     </div>
 </template>
 
 <script>
 export default {
-    created(){
-        //console.log("Creado!!")
-        this.findAll()
-    },
-
+    props:[
+        'elementsList'
+    ],
+   
     data(){
         return{
          
@@ -35,13 +32,8 @@ export default {
         };
     },
     methods: {
-        findAll: function(){
-            fetch('http://127.0.0.1:8000/api/element/?format=json')
-            .then(res => res.json())
-            //.then(res => console.log(res[1].id))
-            .then(res => this.elements =res)
-        }
-    }
+        
+    },
 }
 </script>
 <style>

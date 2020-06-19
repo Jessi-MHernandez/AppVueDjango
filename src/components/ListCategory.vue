@@ -1,29 +1,18 @@
 <template>
     <div class="container">
-        
-            Listado de categorias
-            <div v-for="e in elements" v-bind:key="e.id">
-                <router-link :to="'/detail/' + e.id " >
-                    <b-card
-                    :title ="e.title"
-                    >
-            
-                <b-card-text>
-                    {{e.description}}
-                </b-card-text>
-                </b-card>
-            </router-link>
- 
-        </div>
-        
-
-       <!-- <button v-on:click="findAll">Haz click aqui</button>-->
-
+        <ListDefault :elements-list="elements"/>     
     </div>
 </template>
 
 <script>
+import ListDefault from '../partials/_ListDefault'
+
 export default {
+    components:{
+        ListDefault
+    },
+
+
     created(){
         //console.log("Creado!!")
         this.findAll()
