@@ -7,13 +7,15 @@
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
-//import List from './components/List.vue'
-import List from './components/Table.vue'
+import List from './components/List.vue'
+//import Detail from './components/Detail.vue'
+//import List from './components/Table.vue'
 
 export default {
   name: 'App',
   components: {
-    List
+    List,
+  //  Detail
   }
 }
 </script>
