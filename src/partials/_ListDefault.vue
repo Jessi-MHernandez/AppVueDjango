@@ -1,6 +1,5 @@
 <template>
     <div>
-        
         <div v-for="e in elementsList" v-bind:key="e.id">
             <router-link :to=" '/detail/' + e.id " >
                 <b-card
@@ -12,11 +11,8 @@
                 </b-card-text>
                 </b-card>
             </router-link>
- 
         </div>
-        
-
-    </div>
+     </div>
 </template>
 
 <script>
