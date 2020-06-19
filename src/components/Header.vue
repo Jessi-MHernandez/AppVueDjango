@@ -9,12 +9,15 @@
                     <b-dropdown-item href="#">Settings</b-dropdown-item>
                 </b-nav-item-dropdown>
                 <b-nav-item-dropdown text="Tipos" right>
-                   <b-dropdown-item v-for="t in types" v-bind:key="t.id" :to=" '/type/' + t.id + '/elements'">
+                   <b-dropdown-item v-for="t in types" v-bind:key="t.id" 
+                   :to=" '/type/' + t.id + '/elements'">
                         {{t.title}}
                     </b-dropdown-item>
                 </b-nav-item-dropdown>
+
                 <b-nav-item-dropdown text="Categorias" right>
-                    <b-dropdown-item v-for="c in categories" v-bind:key="c.id" :to=" '/category/' + c.id + '/elements'">
+                    <b-dropdown-item v-for="c in categories" v-bind:key="c.id" 
+                    :to=" '/category/' + c.id + '/elements'">
                         {{c.title}}
                     </b-dropdown-item>
                 </b-nav-item-dropdown>
@@ -27,8 +30,8 @@
 <script>
 export default {
     created() {
-        this.findAllType();
-        this.findAllCategory();
+        this.findAllType()
+        this.findAllCategory()
     },
     data(){
         return {
@@ -40,12 +43,12 @@ export default {
         findAllType: function(){
             fetch('http://127.0.0.1:8000/api/type/?format=json')
                 .then(res => res.json())
-                .then(res => (this.types = res));
+                .then(res => this.types = res)
         },
          findAllCategory: function(){
             fetch('http://127.0.0.1:8000/api/category/?format=json')
                 .then(res => res.json())
-                .then(res => (this.categories = res));
+                .then(res => this.categories = res)
         }
     }
 };

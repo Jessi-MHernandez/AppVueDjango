@@ -3,7 +3,7 @@
         <b-list-group>
             <div v-for="c in categories" v-bind:key="c.id">
                 <b-list-group-item button>
-                    <router-link :to=" '/category/' + c.id + '/element'" >
+                    <router-link :to=" '/category/' + c.id + '/elements'" >
                         {{c.title}}
                     </router-link>
                 </b-list-group-item>
@@ -28,9 +28,8 @@ export default {
         findAll: function(){
             fetch('http://127.0.0.1:8000/api/category/?format=json')
             .then(res => res.json())
-            //.then(res => console.log(res[1].id))
             .then(res => this.categories =res)
         }
     }
-}
+};
 </script>

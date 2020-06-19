@@ -18,10 +18,10 @@ export default {
     },
 
     data(){
-        return{
-         
+        return{         
             element: Object
         };
+    
     },
     methods: {
         find: function(){
@@ -30,7 +30,7 @@ export default {
             //.then(res => console.log(res[1].id))
             .then(res => this.element =res)
         }
-    }
+    },
 }
 </script>
 <style>
