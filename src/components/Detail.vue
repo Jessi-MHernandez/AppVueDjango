@@ -2,7 +2,7 @@
     <div>
             <b-card>
                 <h2>{{element.title}}</h2>
-                <div class="p-3">
+                <div class="p-3" v-if="element.category">
                     <router-link class="btn btn-info btn-sm" :to="{name:'list-category', params:{id: element.category}}">{{category.title}}</router-link>
                     <router-link class="ml-2 btn btn-info btn-sm" :to="{name:'list-type', params:{id: element.type}}">{{type.title}}</router-link>
 
