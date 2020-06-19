@@ -14,8 +14,8 @@ export default {
 
 
     created(){
-        //console.log("Listado de categorias!!");
-        this.findAll();
+        //console.log("Creado!!")
+        this.findAll()
     },
 
     data(){
@@ -26,7 +26,7 @@ export default {
     },
     methods: {
         findAll: function(){
-            fetch('http://127.0.0.1:8000/api/category/'+this.$route.params.id+'/elements/?format=json')
+            fetch('http://127.0.0.1:8000/api/type/'+this.$route.params.id+'/elements/?format=json')
             .then(res => res.json())
             //.then(res => console.log(res[1].id))
             .then(res => this.elements =res)
@@ -34,11 +34,11 @@ export default {
     },
     watch: {
         "$route.params.id" : function(){
-            console.log("Listado de categorias!!");
+            console.log("Listado de tipos!!");
             this.findAll();
         }
     }
-};
+}
 </script>
 <style>
     .box{
