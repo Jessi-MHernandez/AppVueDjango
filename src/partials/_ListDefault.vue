@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <div v-for="e in elementsList" v-bind:key="e.id">
-            <router-link :to=" '/detail/' + e.id " >
-                <b-card
-                    :title ="e.title"
-                >
+    <div class="mt-3 mt-md-0">
+        <div v-for="e in elementsList" v-bind:key="e.id" class="mt-2">
+            <router-link class="card-link" :to=" '/detail/' + e.id " >
+                <b-card :header="e.title"
+                    header-bg-variant="primary"
+                    header-text-variant="white">
             
                 <b-card-text>
                     {{e.description}}
@@ -33,8 +33,13 @@ export default {
 }
 </script>
 <style>
-    .box{
-        border: 2px solid #cccccc;
-        margin: 2px 0 0 0;
+    a.card-link,
+    a.card-link:hover {
+        color:#222;
+        text-decoration: none;
     }
+    a.card-link:hover .card-body{
+        background: #f8f9fa;
+    }
+
 </style>

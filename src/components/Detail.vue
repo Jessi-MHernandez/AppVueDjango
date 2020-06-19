@@ -1,7 +1,10 @@
 <template>
     <div>
-            <b-card :title ="element.title">
-                <b-card-text>{{element.description}} </b-card-text>
+            <b-card>
+                <h2>{{element.title}}</h2>
+                <div class="p-3">
+                    <b-card-text>{{element.description}} </b-card-text>
+                </div>
             </b-card>
        <!-- <button v-on:click="findAll">Haz click aqui</button>-->
     </div>
