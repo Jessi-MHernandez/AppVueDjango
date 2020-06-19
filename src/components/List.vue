@@ -1,8 +1,17 @@
 <template>
     <div>
-        <div class="box" v-for="e in elements" v-bind:key="e.id">
-            {{e.title}}
+        <b-container>
+        <div v-for="e in elements" v-bind:key="e.id">
+            <b-card
+                :title ="e.title"
+            >
+            </b-card>
+            <b-card-text>
+                {{e.description}}
+            </b-card-text>
+ 
         </div>
+        </b-container>
 
        <!-- <button v-on:click="findAll">Haz click aqui</button>-->
 
