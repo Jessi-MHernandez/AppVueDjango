@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mt-3">
             <b-card>
                 <h2>{{element.title}}</h2>
                 <div class="p-3" v-if="element.category">
@@ -9,6 +9,8 @@
                     <b-card-text>{{element.description}} </b-card-text>
                 </div>
             </b-card>
+            <br>
+                <p class="copyright text-muted">Copyright &copy; 2020 · Jess M. Hernández (Ingeniera en Tecnologías de la Información) </p>
        <!-- <button v-on:click="findAll">Haz click aqui</button>-->
     </div>
 </template>

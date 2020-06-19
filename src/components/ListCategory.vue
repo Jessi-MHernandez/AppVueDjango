@@ -1,7 +1,11 @@
 <template>
     <div>
         <ListDefault :elements-list="elements"/>     
+        <br>
+            <p class="copyright text-muted">Copyright &copy; 2020 · Jess M. Hernández (Ingeniera en Tecnologías de la Información) </p>
     </div>
+  
+
 </template>
 
 <script>
