@@ -1,14 +1,19 @@
 <template>
     <div>
         <b-container>
+            <router-link to="/detail">Detalles</router-link>
+
         <div v-for="e in elements" v-bind:key="e.id">
-            <b-card
-                :title ="e.title"
-            >
-            </b-card>
-            <b-card-text>
-                {{e.description}}
-            </b-card-text>
+            <router-link :to=" '/detail/' + e.id " >
+                <b-card
+                    :title ="e.title"
+                >
+            
+                <b-card-text>
+                    {{e.description}}
+                </b-card-text>
+                </b-card>
+            </router-link>
  
         </div>
         </b-container>
